@@ -1,0 +1,25 @@
+{
+  "name": "rsd",
+  "version": "1.0.0",
+  "description": "A website for riverside Dental business",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malhar12/riverSideDental.git"
+  },
+  "author": "Malhar Deshpande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/malhar12/riverSideDental/issues"
+  },
+  "homepage": "https://github.com/malhar12/riverSideDental#readme",
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.3"
+  }
+}

@@ -1,0 +1,33 @@
+<section class="container-fluid">
+  <div class="nav-container">
+    <md-toolbar>
+      <div class="row">
+        <div class="col-md-1">
+          <button>
+              <img src="images/logo-highlight.png" width="120px" height="120px" />
+          </button>
+        </div>
+        <div class="col-md-{{homeCtrl.width.navBar}}" ng-show="homeCtrl.isOpen">
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="#">ABOUT</a></li>
+            <li role="presentation"><a href="#">WHY US</a></li>
+            <li role="presentation"><a href="#">SERVICES</a></li>
+            <li role="presentation"><a href="#">FREE TOOLS</a></li>
+            <li role="presentation"><a href="#">EVENTS</a></li>
+            <li role="presentation"><a href="#">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="col-md-{{homeCtrl.width.trigger}}">
+          <span class="pull-right">
+            <i class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" ng-click="homeCtrl.hideNavBar()"></i>
+          </span>
+        </div>
+      </div>
+    </md-toolbar>
+  </div>
+  <div class="video-container">
+    <video autoplay loop id="video-background" muted>
+      <source src="videos/sliceOfNYC-2-480p.mp4" type="video/mp4">
+    </video>
+  </div>
+</section>

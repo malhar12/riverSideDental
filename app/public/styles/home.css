@@ -1,0 +1,72 @@
+section.container-fluid{
+  margin:0 15px 0 15px;
+  padding:0;
+}
+
+section div.nav-container{
+  position:absolute;
+  top:0;
+  left:0;
+  right: 15px;
+  bottom:0;
+  overflow-x: hidden;
+}
+
+md-toolbar{
+  height: 100px;
+}
+
+md-toolbar div button{
+  background: none;
+  border: 0;
+  margin-left: 15px;
+}
+
+md-toolbar div button:focus{
+  outline: 0;
+}
+
+md-toolbar div span .glyphicon.glyphicon-menu-hamburger{
+  /*color: #e5d80e;*/
+  color: black;
+  font-size: 30px;
+  padding:0 15px 0 0;
+  top: 45px;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+md-toolbar div span .glyphicon.glyphicon-menu-hamburger:focus{
+  outline: 0;
+}
+
+md-toolbar div ul.nav.nav-pills{
+  position: relative;
+  top:40px;
+  font-family: 'OpenSans-Bold', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav-pills > li > a{
+  color:black;
+}
+
+.nav-pills > li.active > a{
+  color:black;
+  background-color: #e5d80e;
+}
+
+#video-background {
+/*  making the video fullscreen  */
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  /*width: 100% !important;
+  height: auto !important;*/
+  z-index: -100;
+}
