@@ -6,19 +6,15 @@
       var vm = this;
 
       vm.isOpen = false;
-      vm.width = {
-        navBar: 10,
-        trigger: 11
+      vm.fabOpen =false;
+      vm.fabDirection = 'left';
+
+      vm.clickedMe = function(){
+        alert('clicked me');
       };
 
       vm.hideNavBar = function(){
         vm.isOpen = vm.isOpen ? false : true;
-        if(vm.isOpen){
-          vm.width.trigger = 1;
-        } else {
-          vm.width.trigger = 11;
-        }
-
       };
     }]);
 })();

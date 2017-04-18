@@ -6,6 +6,13 @@
 }
 
 @font-face{
+    font-family: 'OpenSans-ExtraBold';
+    src: url('../fonts/OpenSans/OpenSans-ExtraBold.ttf') format('truetype');
+    font-style:normal;
+    font-weight: 900;
+}
+
+@font-face{
     font-family: 'OpenSans-Light';
     src: url('../fonts/OpenSans/OpenSans-Light.ttf') format('truetype');
     font-style: normal;

@@ -10,26 +10,23 @@ section div.nav-container{
   right: 15px;
   bottom:0;
   overflow-x: hidden;
+  z-index: 3;
 }
 
-md-toolbar{
-  height: 100px;
-}
-
-md-toolbar div button{
+section div.nav-container div button{
   background: none;
   border: 0;
   margin-left: 15px;
 }
 
-md-toolbar div button:focus{
+section div.nav-container div button:focus{
   outline: 0;
 }
 
-md-toolbar div span .glyphicon.glyphicon-menu-hamburger{
+section div.nav-container div span .fa.fa-bars{
   /*color: #e5d80e;*/
-  color: black;
-  font-size: 30px;
+  color: #ffffff;
+  font-size: 2em;
   padding:0 15px 0 0;
   top: 45px;
   position: relative;
@@ -37,25 +34,179 @@ md-toolbar div span .glyphicon.glyphicon-menu-hamburger{
   cursor: pointer;
 }
 
-md-toolbar div span .glyphicon.glyphicon-menu-hamburger:focus{
+section div.nav-container div span .fa.fa-bars:focus{
   outline: 0;
 }
 
-md-toolbar div ul.nav.nav-pills{
+section div.nav-container div button:hover{
+  background: src('images/logo-normal.png');
+}
+
+section div.overlay-nav div ul.nav.flex-column{
   position: relative;
-  top:40px;
-  font-family: 'OpenSans-Bold', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
+  top:0;
+  font-family: 'OpenSans-ExtraBold', sans-serif;
+  font-size: 3em;
+  font-weight: 900;
+  /*padding:0 0 0 30px;*/
 }
 
-.nav-pills > li > a{
-  color:black;
+section div.overlay-nav div ul.nav.flex-column > li > a{
+  color: white;
+  padding-left:45px;
 }
 
-.nav-pills > li.active > a{
-  color:black;
+section div.overlay-nav div ul.nav.flex-column > li > a:active{
+  color: #e5d80e;
+  background-color: white;
+}
+
+section div.overlay-nav div ul.nav.flex-column > li > a:hover{
+  color: #e5d80e;
+  background-color: white;
+}
+
+section div.overlay-nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 15px;
+  bottom:0;
+  width: 100%;
+  height: 100%;
   background-color: #e5d80e;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+section div.overlay-nav div button{
+  background: none;
+  border: 0;
+  margin-left: 15px;
+}
+
+section div.overlay-nav div button:focus{
+  outline: 0;
+}
+
+section div.overlay-nav div span .fa.fa-times{
+  /*color: #e5d80e;*/
+  color: #ffffff;
+  font-size: 2em;
+  padding:0 30px 0 0;
+  top: 45px;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+section div.overlay-nav div span .fa.fa-times:focus{
+  outline: 0;
+}
+
+section div.overlay-nav.ng-enter{
+  transition: ease-in-out;
+  opacity: 0;
+}
+
+section div.overlay-nav.ng-enter.ng-enter-active{
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 419px){
+
+  section div.overlay-nav div span .fa.fa-times{
+    /*color: #e5d80e;*/
+    color: #ffffff;
+    font-size: 2em;
+    padding:0 45px 0 0;
+    top: 45px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  section div.nav-container div span .fa.fa-bars{
+    /*color: #e5d80e;*/
+    color: #ffffff;
+    font-size: 2em;
+    padding:0 30px 0 0;
+    top: 45px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  section div.overlay-nav div ul.nav.flex-column{
+    position: relative;
+    top:0;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    font-size: 3em;
+    font-weight: 900;
+    /*padding:0 0 0 30px;*/
+  }
+
+}
+
+@media screen and (min-width: 420px) and (max-width: 1024px){
+
+  section div.overlay-nav div span .fa.fa-times{
+    /*color: #e5d80e;*/
+    color: #ffffff;
+    font-size: 2em;
+    padding:0 45px 0 0;
+    top: 45px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  section div.nav-container div span .fa.fa-bars{
+    /*color: #e5d80e;*/
+    color: #ffffff;
+    font-size: 2em;
+    padding:0 30px 0 0;
+    top: 45px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  section div.overlay-nav div ul.nav.flex-column{
+    position: relative;
+    top:0;
+    font-family: 'OpenSans-ExtraBold', sans-serif;
+    font-size: 6em;
+    font-weight: 900;
+    /*padding:0 0 0 30px;*/
+  }
+
+}
+
+.fabToolBar{
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+}
+
+.fabToolBar ul{
+  list-style: none;
+}
+
+.fabToolBar ul > li{
+  display: inline;
+  padding:8px;
+}
+
+.fabToolBar ul > li > i{
+  color: #ffffff;
+  font-size: 2em;
+}
+
+.fabToolBar ul > li > i:hover{
+  color: #e5d80e;
+  font-size: 2em;
 }
 
 #video-background {
