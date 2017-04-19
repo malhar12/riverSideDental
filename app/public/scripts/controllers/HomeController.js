@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('riversideDental')
-    .controller('HomeController', [function(){
+    .controller('HomeController', ['$rootScope', 'ngProgressFactory', function($rootScope, ngProgressFactory){
       var vm = this;
 
       vm.isOpen = false;
@@ -16,5 +16,18 @@
       vm.hideNavBar = function(){
         vm.isOpen = vm.isOpen ? false : true;
       };
+
+      $rootScope.progressBar = ngProgressFactory.createInstance();
+
+      //ngProgress.setColor('#ffffff');
+
+      $rootScope.$on('$routeChangeStart', function(){
+        $rootScope.progressBar.start();
+      });
+
+      $rootScope.$on('$routeChangeSuccess', function(){
+        $rootScope.progressBar.complete();
+      });
+
     }]);
 })();
