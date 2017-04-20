@@ -9,14 +9,20 @@
       .run(['$rootScope', 'ngProgressFactory', function($rootScope, ngProgressFactory){
         $rootScope.progressBar = ngProgressFactory.createInstance();
 
-        //ngProgressFactory.setColor('#ffffff');
+        $rootScope.progressBar.setColor('blue');
 
-        $rootScope.$on('$routeChangeStart', function(){
+        $rootScope.$on('$stateChangeStart', function(){
+          //console.log('state change started');
           $rootScope.progressBar.start();
         });
 
-        $rootScope.$on('$routeChangeSuccess', function(){
+        $rootScope.$on('$stateChangeSuccess', function(){
+          //console.log('state change completed');
           $rootScope.progressBar.complete();
+        });
+
+        $rootScope.$on('$stateChangeError', function(){
+          $rootScope.progressBar.reset();
         });
       }])
       .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
