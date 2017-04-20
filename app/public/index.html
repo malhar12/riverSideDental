@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles/home.css">
   </head>
   <body ng-app="riversideDental">
+  <!-- <body> -->
     <base href="/">
     <div ui-view></div>
 
@@ -26,5 +27,16 @@
     <!-- Application JS -->
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/HomeController.js"></script>
+    <script src="scripts/directives/MAppDirective.js"></script>
+    <!-- <script type="text/javascript">
+        setTimeout(
+                    function asyncBootstrap() {
+                      angular.element(function() {
+                        angular.bootstrap(document, ['riversideDental']);
+                      });
+                    },
+                    ( 3 * 1000 )
+                );
+    </script> -->
   </body>
 </html>

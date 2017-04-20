@@ -4,20 +4,19 @@
   angular.module('riversideDental', [
     'ui.router',
     'ngMaterial',
-    'ngProgress'
+    'ngProgress',
+    'ngAnimate'
   ])
-      .run(['$rootScope', 'ngProgressFactory', function($rootScope, ngProgressFactory){
+      .run(['$rootScope', 'ngProgressFactory', '$timeout', function($rootScope, ngProgressFactory, $timeout){
         $rootScope.progressBar = ngProgressFactory.createInstance();
 
         $rootScope.progressBar.setColor('blue');
 
         $rootScope.$on('$stateChangeStart', function(){
-          //console.log('state change started');
           $rootScope.progressBar.start();
         });
 
         $rootScope.$on('$stateChangeSuccess', function(){
-          //console.log('state change completed');
           $rootScope.progressBar.complete();
         });
 

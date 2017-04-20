@@ -7,7 +7,7 @@ section div.nav-container{
   position:absolute;
   top:0;
   left:0;
-  right: 15px;
+  right: 0;
   bottom:0;
   overflow-x: hidden;
   z-index: 3;
@@ -93,7 +93,7 @@ section div.overlay-nav div span .fa.fa-times{
   /*color: #e5d80e;*/
   color: #ffffff;
   font-size: 2em;
-  padding:0 30px 0 0;
+  padding:0 15px 0 0;
   top: 45px;
   position: relative;
   vertical-align: middle;
@@ -120,7 +120,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
     /*color: #e5d80e;*/
     color: #ffffff;
     font-size: 2em;
-    padding:0 45px 0 0;
+    padding:0 30px 0 0;
     top: 45px;
     position: relative;
     vertical-align: middle;
@@ -142,7 +142,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
     position: relative;
     top:0;
     font-family: 'OpenSans-ExtraBold', sans-serif;
-    font-size: 3em;
+    font-size: 2em;
     font-weight: 900;
     /*padding:0 0 0 30px;*/
   }
@@ -155,7 +155,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
     /*color: #e5d80e;*/
     color: #ffffff;
     font-size: 2em;
-    padding:0 45px 0 0;
+    padding:0 30px 0 0;
     top: 45px;
     position: relative;
     vertical-align: middle;
@@ -177,7 +177,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
     position: relative;
     top:0;
     font-family: 'OpenSans-ExtraBold', sans-serif;
-    font-size: 6em;
+    font-size: 5em;
     font-weight: 900;
     /*padding:0 0 0 30px;*/
   }
@@ -186,7 +186,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 
 .fabToolBar{
   position: absolute;
-  right: 0;
+  right: 15px;
   bottom: 15px;
 }
 
@@ -208,6 +208,62 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   color: #e5d80e;
   font-size: 2em;
 }
+
+/*********/
+div.m-app-loading .spinner {
+  margin: 50% auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+  background-color: #e5d80e;
+}
+
+div.m-app-loading .spinner > div {
+  background-color: #ffffff;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+div.m-app-loading .spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+div.m-app-loading .spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+div.m-app-loading .spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+div.m-app-loading .spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+/*********/
 
 #video-background {
 /*  making the video fullscreen  */
