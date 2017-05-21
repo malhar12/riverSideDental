@@ -1,0 +1,16 @@
+.contact-mainContainer, .officeContainer{
+  margin: 90px auto;
+}
+
+.formContainer{
+  margin-top: 50px;
+}
+
+.formContainer .formBox{
+  padding: 10px;
+  margin:auto;
+}
+
+.legendClass{
+  border-bottom: 0;
+}

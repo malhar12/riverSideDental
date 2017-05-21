@@ -1,0 +1,49 @@
+.footerContainer{
+  background-color: #222;
+  color: #b1aca1;
+	min-height:200px;
+	padding:80px 0 50px 0;
+}
+
+.tagline{
+  margin-top:15px;
+  margin-left: 25%;
+}
+
+.copyright{
+  	padding-top: 50px;
+}
+
+/*.copyright p{
+	font-family:Roboto;
+	padding:15px 0 10px 0;
+}*/
+
+.footerContainer .menu li a{
+	color:#b1aca1;
+	padding:10px;
+	text-decoration:none;
+}
+
+.footerContainer .menu li a:hover{
+	color:#7dabdb;
+}
+
+ul.menu.list-inline{
+  margin-top: 10px;
+}
+
+.list-inline > li{
+  padding: 5px;
+}
+
+.footerContainer .fa.fa-facebook , .fa.fa-dropbox, .fa.fa-flickr , .fa.fa-github , .fa.fa-linkedin ,.fa,fa-tumblr ,.fa.fa-google-plus , .fa.fa-tumblr {
+	color:#b1aca1;
+	font-size:20px;
+	padding:10px;
+	/*margin-bottom:50px;*/
+}
+
+.footerContainer .fa.fa-facebook:hover , .fa.fa-dropbox:hover , .fa.fa-flickr:hover  , .fa.fa-github:hover  , .fa.fa-linkedin:hover  ,.fa,fa-tumblr:hover  ,.fa.fa-google-plus:hover  , .fa.fa-tumblr:hover  {
+	color:#6794c2;
+}

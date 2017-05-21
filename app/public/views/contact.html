@@ -1,0 +1,82 @@
+<div class="container-fluid">
+  <!-- Container for Navigation Bar -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <nav-directive></nav-directive>
+    </div>
+  </div>
+
+  <!-- Container for the Main Content -->
+  <div class="row contact-mainContainer">
+    <div class="col-md-6 mapContainer">
+      <img class="img-responsive" ng-src="../images/staticmap.png" alt="google map image"/>
+    </div>
+    <div class="col-md-6 formContainer">
+      <div class="well well-sm">
+        <form>
+        <div class="row formBox">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">
+                        Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter Name" required="required" />
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        Email Address</label>
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                        </span>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">
+                        Subject</label>
+                    <input type="text" class="form-control" id="subject" placeholder="Enter Subject" required="required" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">
+                        Message</label>
+                    <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                        placeholder="Message" style="resize:none;"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                    Send Message</button>
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row officeContainer">
+    <div class="col-md-6">
+      <legend class="legendClass"><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+      <address>
+          <strong>Dental Xplorer, Inc.</strong><br>
+          795 Folsom Ave, Suite 600<br>
+          New York City, NY 10010<br>
+      </address>
+    </div>
+    <div class="col-md-6">
+      <legend class="legendClass"><span class="glyphicon glyphicon-phone-alt"></span> Reach Us At</legend>
+      <address>
+        <abbr title="Phone">
+                      P:</abbr>
+                  (123) 456-7890
+        <p>Mail us at<a href="mailto:#">first.last@example.com</a></p>
+      </address>
+    </div>
+  </div>
+
+  <!-- Container for Footer -->
+  <div class="row footerContainer">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <footer-directive></footer-directive>
+    </div>
+  </div>
+</div>

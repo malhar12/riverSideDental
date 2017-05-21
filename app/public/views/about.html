@@ -1,0 +1,77 @@
+<section class="container-fluid">
+  <!-- Container for Navigation Bar -->
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <nav-directive></nav-directive>
+    </div>
+  </div>
+
+
+  <!-- Contianer for the main content area  -->
+  <div class="mainContent-Contianer">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <h1 class="display-3">Who we are ?</h1>
+        <p class="lead">
+          We are service providers to Dentists /Dental students who are seeking to provide dentistry in USA and want to make an informed decision about the realities of life after graduation.
+        </p>
+        <p class="lead">
+          Our Vision is to:
+        </p>
+        <ul class="listContainer">
+          <li>Share our knowledge</li>
+          <li>Experiences</li>
+          <li>Resources</li>
+          <li>Skills</li>
+        </ul>
+        <p class="lead">So, we can help you make a clear informed decision before you move to USA and pursue dentistry as a career</p>
+      </div>
+      <div class="col-md-offset-1 col-sm-offset-1 col-md-7 col-sm-7 col-xs-12 videoContainer">
+        <div class="videoPlayer">
+          <videogular vg-theme="aboutCtrl.config.theme">
+            <vg-media vg-src="aboutCtrl.config.sources"
+                vg-tracks="aboutCtrl.config.tracks">
+            </vg-media>
+
+            <vg-controls>
+              <vg-play-pause-button></vg-play-pause-button>
+              <!-- <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display> -->
+              <vg-scrub-bar>
+                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+              </vg-scrub-bar>
+              <!-- <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display> -->
+              <vg-volume>
+                <vg-mute-button></vg-mute-button>
+                <vg-volume-bar></vg-volume-bar>
+              </vg-volume>
+              <vg-fullscreen-button></vg-fullscreen-button>
+            </vg-controls>
+            <vg-overlay-play></vg-overlay-play>
+          </videogular>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-offset-2 col-md-offset-1 col-sm-offset-1 col-xs-offset-2 col-lg-8 col-md-10 col-sm-11 col-xs-8">
+      <slick class="carouselContainer" settings="aboutCtrl.slickConfig" ng-if="aboutCtrl.numberLoaded" slides-to-show=4 slides-to-scroll=1 dots="false" responsive="aboutCtrl.breakpoints"infinite="true" >
+        <div ng-repeat="teamMem in aboutCtrl.teamSolos">
+          <div class="card">
+            <img class="card-img-top" ng-src="{{teamMem.imgSrc}}" width="160" height="160" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title">{{teamMem.name}}</h4>
+              <p class="card-text">{{teamMem.description}}</p>
+            </div>
+          </div>
+        </div>
+      </slick>
+    </div>
+    </div>
+  </div>
+
+  <!-- Container for Footer -->
+  <div class="row footerContainer">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <footer-directive></footer-directive>
+    </div>
+  </div>
+</section>

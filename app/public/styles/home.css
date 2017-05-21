@@ -45,7 +45,7 @@ section div.nav-container div button:hover{
 section div.overlay-nav div ul.nav.flex-column{
   position: relative;
   top:0;
-  font-family: 'OpenSans-ExtraBold', sans-serif;
+  font-family: 'Lato-ExtraBold', sans-serif;
   font-size: 3em;
   font-weight: 900;
   /*padding:0 0 0 30px;*/
@@ -141,7 +141,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   section div.overlay-nav div ul.nav.flex-column{
     position: relative;
     top:0;
-    font-family: 'OpenSans-ExtraBold', sans-serif;
+    font-family: 'Lato-ExtraBold', sans-serif;
     font-size: 2em;
     font-weight: 900;
     /*padding:0 0 0 30px;*/
@@ -176,7 +176,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   section div.overlay-nav div ul.nav.flex-column{
     position: relative;
     top:0;
-    font-family: 'OpenSans-ExtraBold', sans-serif;
+    font-family: 'Lato-ExtraBold', sans-serif;
     font-size: 5em;
     font-weight: 900;
     /*padding:0 0 0 30px;*/

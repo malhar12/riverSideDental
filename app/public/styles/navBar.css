@@ -1,0 +1,59 @@
+/*This is a stylesheet for the Navigation Bar*/
+
+.dropdown-container .dropdown-menu{
+  position: absolute;
+  right: 15px;
+  left:auto;
+}
+
+nav{
+  font-size: 16px;
+}
+
+/*nav.navbar.navbar-default{
+  background-color: #e5d80e;
+}*/
+
+nav .container-fluid .navbar-header .dropdown-container ul.dropdown-menu > li > a{
+  font-family: 'Lato-Regular', sans-serif;
+  font-weight: 500;
+}
+
+nav .container-fluid #bs-navbar-collapse.collapse.navbar-collapse ul > li > a{
+  font-family: 'Lato-Regular', sans-serif;
+  font-weight: 500;
+}
+
+nav .container-fluid .navbar-header .dropdown-container button.navbar-toggle{
+  border:none;
+  border-color: none;
+}
+
+nav .container-fluid #bs-navbar-collapse.collapse.navbar-collapse ul > li > a:hover{
+  color: #ffffff;
+}
+
+nav .container-fluid #bs-navbar-collapse.collapse.navbar-collapse ul > li:hover{
+  background-color: #e5d80e;
+}
+
+nav .container-fluid #bs-navbar-collapse.collapse.navbar-collapse ul > li.active > a{
+  background-color: #e5d80e;
+}
+
+@media screen and (max-width: 420px){
+  .navbar-brand{
+    padding: 25px 15px 15px 15px !important;
+  }
+}
+
+.brandName{
+  font-family: 'Cedarville Cursive', cursive;
+  /*font-family: 'Damion', cursive;*/
+  color: #e5d80e;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*Endof Navigation Bar Stylesheet*/

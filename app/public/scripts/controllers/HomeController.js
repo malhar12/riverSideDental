@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('riversideDental')
-    .controller('HomeController', [function(){
+    .controller('HomeController', [ function(){
       var vm = this;
 
       vm.isOpen = false;

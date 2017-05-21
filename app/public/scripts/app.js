@@ -5,12 +5,23 @@
     'ui.router',
     'ngMaterial',
     'ngProgress',
-    'ngAnimate'
+    'ngAnimate',
+    'slick',
+    'ngSanitize',
+		'com.2fdevs.videogular',
+	  'com.2fdevs.videogular.plugins.controls',
+	  'com.2fdevs.videogular.plugins.overlayplay',
+	  'com.2fdevs.videogular.plugins.buffering',
+	  'com.2fdevs.videogular.plugins.poster'
   ])
-      .run(['$rootScope', 'ngProgressFactory', '$timeout', function($rootScope, ngProgressFactory, $timeout){
+      .run(['$rootScope', 'ngProgressFactory', '$timeout', '$state', '$stateParams', function($rootScope, ngProgressFactory, $timeout, $state, $stateParams){
+
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+
         $rootScope.progressBar = ngProgressFactory.createInstance();
 
-        $rootScope.progressBar.setColor('blue');
+        $rootScope.progressBar.setColor('#e5d80e');
 
         $rootScope.$on('$stateChangeStart', function(){
           $rootScope.progressBar.start();
@@ -27,7 +38,7 @@
       .config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
         $urlRouterProvider.otherwise('/');
 
-        $locationProvider.html5Mode(true);
+        //$locationProvider.html5Mode(true);
 
         $stateProvider.state('home', {
           url: '/',
@@ -37,7 +48,21 @@
         })
         .state('about', {
           url: '/about',
-          template: '<h1>About.html</h1>'
+          templateUrl: 'views/about.html',
+          controller: 'AboutController',
+          controllerAs: 'aboutCtrl'
+        })
+        .state('services', {
+          url: '/services',
+          templateUrl: 'views/services.html',
+          controller: 'ServicesController',
+          controllerAs: 'servicesCtrl'
+        })
+        .state('contact', {
+          url: '/contact',
+          templateUrl: 'views/contact.html',
+          controller: 'ContactController',
+          controllerAs: 'contactCtrl'
         });
       }]);
 })();

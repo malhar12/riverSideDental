@@ -6,7 +6,7 @@
 
   app.use(express.static(__dirname + '/app/public'));
 
-  app.listen(8080, function(){
-    console.log('starting the server at 8080...');
+  app.listen(3000, function(){
+    console.log('starting the server at 3000...');
   });
 })();
