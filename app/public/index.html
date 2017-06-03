@@ -33,7 +33,7 @@
   </head>
   <body ng-app="riversideDental">
   <!-- <body> -->
-    <!-- <base href="/"> -->
+    <base href="/">
     <div ui-view></div>
 
     <!-- Vendor JS -->
@@ -51,6 +51,10 @@
         setTimeout(function(){
           loading_screen.finish();
         }, 3000);
+      });
+
+      $('#collapse2').click(function(event){
+        event.preventDefault();
       });
     </script>
     <script src="bower_components/angular/angular.js"></script>
@@ -80,5 +84,7 @@
     <script src="scripts/directives/NavDirective.js"></script>
     <script src="scripts/directives/FooterDirective.js"></script>
     <script src="scripts/directives/CarouselDirective.js"></script>
+    <script src="scripts/directives/activeDeactive.js"></script>
+    <script src="scripts/services/imageService.js"></script>
   </body>
 </html>

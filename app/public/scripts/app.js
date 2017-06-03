@@ -55,6 +55,17 @@
         .state('services', {
           url: '/services',
           templateUrl: 'views/services.html',
+          resolve: {
+            imageService: 'imageService',
+            images: function(imageService){
+              return imageService.getData().then(function(data){
+                console.log(data);
+                return data;
+              }, function(err){
+                console.log(err);
+              });
+            }
+          },
           controller: 'ServicesController',
           controllerAs: 'servicesCtrl'
         })

@@ -8,20 +8,267 @@
 
   <!-- Container for the main content area -->
   <div class="row Services-MainContent-Contianer">
-    <div class="col-md-offset-2 col-md-8">
-      <div class="row">
-        <div class="col-md-4 counseling-serviceBox">
+    <div class="col-md-offset-2 col-sm-offset-2 col-md-8 col-sm-8 content-Container" ng-if="!servicesCtrl.checkMedia()">
+      <div class="row gridContainer">
+        <div class="col-md-4 col-sm-4 counseling-serviceBox" data-toggle="modal" data-target="#myModal" ng-click="servicesCtrl.putData(0)">
           <div class="imageContainer">
-            <img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCA0ODAgNDgwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0ODAgNDgwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCI+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTE3NiwzMDRjLTI2LjQ3MiwwLTQ4LDIxLjUyOC00OCw0OHMyMS41MjgsNDgsNDgsNDhzNDgtMjEuNTI4LDQ4LTQ4UzIwMi40NzIsMzA0LDE3NiwzMDR6IE0xNzYsMzg0ICAgIGMtMTcuNjQ4LDAtMzItMTQuMzUyLTMyLTMyczE0LjM1Mi0zMiwzMi0zMnMzMiwxNC4zNTIsMzIsMzJTMTkzLjY0OCwzODQsMTc2LDM4NHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0xNzYsODBjLTI2LjQ3MiwwLTQ4LDIxLjUyOC00OCw0OHMyMS41MjgsNDgsNDgsNDhzNDgtMjEuNTI4LDQ4LTQ4UzIwMi40NzIsODAsMTc2LDgweiBNMTc2LDE2MCAgICBjLTE3LjY0OCwwLTMyLTE0LjM1Mi0zMi0zMnMxNC4zNTItMzIsMzItMzJzMzIsMTQuMzUyLDMyLDMyUzE5My42NDgsMTYwLDE3NiwxNjB6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDgsMzA0Yy0yNi40NzIsMC00OCwyMS41MjgtNDgsNDhzMjEuNTI4LDQ4LDQ4LDQ4czQ4LTIxLjUyOCw0OC00OFM3NC40NzIsMzA0LDQ4LDMwNHogTTQ4LDM4NCAgICBjLTE3LjY0OCwwLTMyLTE0LjM1Mi0zMi0zMnMxNC4zNTItMzIsMzItMzJzMzIsMTQuMzUyLDMyLDMyUzY1LjY0OCwzODQsNDgsMzg0eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ4LDgwYy0yNi40NzIsMC00OCwyMS41MjgtNDgsNDhzMjEuNTI4LDQ4LDQ4LDQ4czQ4LTIxLjUyOCw0OC00OFM3NC40NzIsODAsNDgsODB6IE00OCwxNjBjLTE3LjY0OCwwLTMyLTE0LjM1Mi0zMi0zMiAgICBzMTQuMzUyLTMyLDMyLTMyczMyLDE0LjM1MiwzMiwzMlM2NS42NDgsMTYwLDQ4LDE2MHoiIGZpbGw9IiMwMDAwMDAiLz4KCTwvZz4KPC9nPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zMDQsMTkyYy0yNi40NzIsMC00OCwyMS41MjgtNDgsNDhzMjEuNTI4LDQ4LDQ4LDQ4czQ4LTIxLjUyOCw0OC00OFMzMzAuNDcyLDE5MiwzMDQsMTkyeiBNMzA0LDI3MiAgICBjLTE3LjY0OCwwLTMyLTE0LjM1Mi0zMi0zMnMxNC4zNTItMzIsMzItMzJzMzIsMTQuMzUyLDMyLDMyUzMyMS42NDgsMjcyLDMwNCwyNzJ6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cGF0aCBkPSJNMzA0LDMwNGMtMjYuNDcyLDAtNDgsMjEuNTI4LTQ4LDQ4czIxLjUyOCw0OCw0OCw0OHM0OC0yMS41MjgsNDgtNDhTMzMwLjQ3MiwzMDQsMzA0LDMwNHogTTMwNCwzODQgICAgYy0xNy42NDgsMC0zMi0xNC4zNTItMzItMzJzMTQuMzUyLTMyLDMyLTMyczMyLDE0LjM1MiwzMiwzMlMzMjEuNjQ4LDM4NCwzMDQsMzg0eiIgZmlsbD0iIzAwMDAwMCIvPgoJPC9nPgo8L2c+CjxnPgoJPGc+CgkJPHBhdGggZD0iTTQ1NiwyNTQuNDk2VjE1MlY5NnYtOGMwLTIuNzEyLTEuMzY4LTUuMjMyLTMuNjQtNi43MTJjLTIuMjcyLTEuNDcyLTUuMTM2LTEuNjk2LTcuNjA4LTAuNmwtNzIsMzIgICAgQzM2OS44NTYsMTEzLjk3NiwzNjgsMTE2LjgzMiwzNjgsMTIwYzAsMy4xNjgsMS44NTYsNi4wMjQsNC43NTIsNy4zMTJMNDQwLDE1Ny4ydjkxLjUyYy0yLjYwOC0wLjQ0LTUuMjcyLTAuNzItOC0wLjcyICAgIGMtMTAuMDU2LDAtMTkuMzkyLDMuMTItMjcuMTEyLDguNDMyTDM0NS4zNiwxNTIuMjQ4YzQuMTkyLTcuMTI4LDYuNjQtMTUuNCw2LjY0LTI0LjI0OGMwLTI2LjQ3Mi0yMS41MjgtNDgtNDgtNDggICAgcy00OCwyMS41MjgtNDgsNDhjMCw3Ljk2OCwxLjk4NCwxNS40NzIsNS40MzIsMjIuMDg4bC02MS44OCw0OC4xMjhDMTkyLjU4NCwxOTQuMjgsMTg0LjU2LDE5MiwxNzYsMTkyICAgIGMtMjMuNzM2LDAtNDMuNDQ4LDE3LjMzNi00Ny4yOCw0MEg5NS4yOGMtMy44MjQtMjIuNjY0LTIzLjUzNi00MC00Ny4yOC00MGMtMjYuNDcyLDAtNDgsMjEuNTI4LTQ4LDQ4czIxLjUyOCw0OCw0OCw0OCAgICBjMjMuNzM2LDAsNDMuNDQ4LTE3LjMzNiw0Ny4yOC00MGgzMy40NDhjMy44MjQsMjIuNjY0LDIzLjUzNiw0MCw0Ny4yOCw0MGMyNi40NzIsMCw0OC0yMS41MjgsNDgtNDggICAgYzAtMTItNC40NTYtMjIuOTYtMTEuNzYtMzEuMzg0bDU4Ljg0OC00NS43NjhDMjc5LjY4OCwxNzAuOTc2LDI5MS4yNTYsMTc2LDMwNCwxNzZjMTEuNDg4LDAsMjIuMDQtNC4wNjQsMzAuMzEyLTEwLjgyNCAgICBsNTguNzM2LDEwMi43OTJsMC4xMDQtMC4wNjRDMzg3LjQyNCwyNzUuODE2LDM4NCwyODUuNTA0LDM4NCwyOTZjMCwyNi40NzIsMjEuNTI4LDQ4LDQ4LDQ4czQ4LTIxLjUyOCw0OC00OCAgICBDNDgwLDI3OC4yOCw0NzAuMzIsMjYyLjgwOCw0NTYsMjU0LjQ5NnogTTQ4LDI3MmMtMTcuNjQ4LDAtMzItMTQuMzUyLTMyLTMyczE0LjM1Mi0zMiwzMi0zMnMzMiwxNC4zNTIsMzIsMzJTNjUuNjQ4LDI3Miw0OCwyNzJ6ICAgICBNMTc2LDI3MmMtMTcuNjQ4LDAtMzItMTQuMzUyLTMyLTMyczE0LjM1Mi0zMiwzMi0zMnMzMiwxNC4zNTIsMzIsMzJTMTkzLjY0OCwyNzIsMTc2LDI3MnogTTMwNCwxNjBjLTE3LjY0OCwwLTMyLTE0LjM1Mi0zMi0zMiAgICBzMTQuMzUyLTMyLDMyLTMyczMyLDE0LjM1MiwzMiwzMlMzMjEuNjQ4LDE2MCwzMDQsMTYweiBNMzk1LjY5NiwxMjBMNDQwLDEwMC4zMTJ2MzkuMzc2TDM5NS42OTYsMTIweiBNNDMyLDMyOCAgICBjLTE3LjY0OCwwLTMyLTE0LjM1Mi0zMi0zMnMxNC4zNTItMzIsMzItMzJjMi43NzYsMCw1LjQyNCwwLjQ2NCw4LDEuMTM2VjI5NmgxNnYtMjAuOTQ0YzQuOTIsNS42MjQsOCwxMi44OTYsOCwyMC45NDQgICAgQzQ2NCwzMTMuNjQ4LDQ0OS42NDgsMzI4LDQzMiwzMjh6IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSIzOTIiIHk9IjM2MCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSI0MjQiIHk9IjM2MCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+Cgk8Zz4KCQk8cmVjdCB4PSI0NTYiIHk9IjM2MCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSIjMDAwMDAwIi8+Cgk8L2c+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" />
+            <img
+             class="img-responsive"
+             ng-src="{{servicesCtrl.imageData.data[0].dataSrc}}" />
+          </div>
+          <div class="cardTitle text-center"><span>Counselling</span></div>
+        </div>
+        <div class="col-md-4 col-sm-4 network-serviceBox" data-toggle="modal" data-target="#myModal" ng-click="servicesCtrl.putData(1)">
+          <div class="imageContainer">
+            <img
+              class="img-responsive"
+              ng-src="{{servicesCtrl.imageData.data[1].dataSrc}}" />
+          </div>
+          <div class="cardTitle text-center"><span>Network with Dentists</span></div>
+        </div>
+        <div class="col-md-4 col-sm-4 test-serviceBox" data-toggle="modal" data-target="#myModal" ng-click="servicesCtrl.putData(2)">
+          <div class="imageContainer">
+            <img
+             class="img-responsive"
+             ng-src="{{servicesCtrl.imageData.data[2].dataSrc}}" />
+          </div>
+          <div class="cardTitle text-center"><span>Bench Test</span></div>
+        </div>
+      </div>
+      <div class="row gridContainer">
+        <div class="col-md-4 col-sm-4 food-serviceBox" data-toggle="modal" data-target="#myModal" ng-click="servicesCtrl.putData(3)">
+          <div class="imageContainer">
+            <img
+             class="img-responsive"
+             ng-src="{{servicesCtrl.imageData.data[3].dataSrc}}" />
+          </div>
+          <div class="cardTitle text-center"><span>Food</span></div>
+        </div>
+        <div class="col-md-4 col-sm-4 hotel-serviceBox" data-toggle="modal" data-target="#myModal" ng-click="servicesCtrl.putData(4)">
+          <div class="imageContainer">
+            <img
+             class="img-responsive"
+             ng-src="{{servicesCtrl.imageData.data[4].dataSrc}}" />
+          </div>
+          <div class="cardTitle text-center"><span>Hotel/Accomodation</span></div>
+        </div>
+        <div class="col-md-4 col-sm-4 places-serviceBox" data-toggle="modal" data-target="#myModal" ng-click="servicesCtrl.putData(5)">
+          <div class="imageContainer">
+            <img
+             class="img-responsive"
+             ng-src="{{servicesCtrl.imageData.data[5].dataSrc}}" />
+          </div>
+          <div class="cardTitle text-center"><span>Places to Visit</span></div>
+        </div>
+      </div>
+
+      <!-- Modal Window -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ng-cloak>
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"></i></button>
+              <h4 class="modal-title" id="myModalLabel">{{servicesCtrl.imageData.data[servicesCtrl.getData()].title}}</h4>
+            </div>
+            <div class="modal-body">
+              <ul style="list-style:none;">
+                <div class="row">
+                  <li ng-repeat="listItem in servicesCtrl.imageData.data[servicesCtrl.getData()].modalData" class="list-group listClass">
+                    <img
+                      class="img-responsive"
+                      ng-src="{{listItem.dataSrc}}" />
+                    <ul>
+                      <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+                    </ul>
+                  </li>
+                </div>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="col-md-4 network-serviceBox"></div>
-        <div class="col-md-4 test-serviceBox"></div>
       </div>
-      <div class="row">
-        <div class="col-md-4 food-serviceBox"></div>
-        <div class="col-md-4 hotel-serviceBox"></div>
-        <div class="col-md-4 places-serviceBox"></div>
+    </div>
+    <div class="col-md-offset-2 col-md-8 list-container" ng-if="servicesCtrl.checkMedia()">
+      <div class="panel-group" id="accordion" aria-multiselectable="true">
+       <!--panel-->
+       <div class="panel panel-default">
+        <div class="panel-heading collapsed" data-parent="#accordian" data-toggle="collapse" data-target="#collapse1" active-deactive>
+          <h3 class="panel-title text-left">
+            <img
+             class="img-responsive"
+             ng-src="{{servicesCtrl.imageData.data[0].dataSrc}}" />
+            <span>{{servicesCtrl.imageData.data[0].title}}</span>
+          </h3>
+          <!-- <i class="fa fa-chevron-down pull-right icon-rotate"></i> -->
+          <div class="openList pull-right"></div>
+        </div>
+        <div id="collapse1" class="collapse">
+          <div class="panel-body">
+            <div class="row listRow" ng-repeat="listItem in servicesCtrl.imageData.data[0].modalData">
+              <div class="col-xs-4">
+                <img
+                  class="img-responsive"
+                  ng-src="{{listItem.dataSrc}}" />
+              </div>
+              <div class="col-xs-8">
+                <ul>
+                  <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div>
+
+      <!--panel-->
+      <div class="panel panel-default">
+       <div class="panel-heading collapsed" data-parent="#accordian" data-toggle="collapse" data-target="#collapse2" active-deactive>
+         <h3 class="panel-title text-left">
+           <img
+            class="img-responsive"
+            ng-src="{{servicesCtrl.imageData.data[1].dataSrc}}" />
+           <span>{{servicesCtrl.imageData.data[1].title}}</span>
+         </h3>
+         <!-- <i class="fa fa-chevron-down pull-right icon-rotate"></i> -->
+         <div class="openList pull-right"></div>
+       </div>
+       <div id="collapse2" class="collapse">
+         <div class="panel-body">
+           <div class="row listRow" ng-repeat="listItem in servicesCtrl.imageData.data[1].modalData">
+             <div class="col-xs-4">
+               <img
+                 class="img-responsive"
+                 ng-src="{{listItem.dataSrc}}" />
+             </div>
+             <div class="col-xs-8">
+               <ul>
+                 <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+               </ul>
+             </div>
+           </div>
+         </div>
+       </div>
+      </div>
+
+         <!--panel-->
+         <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-parent="#accordian" data-toggle="collapse" data-target="#collapse3" active-deactive>
+            <h3 class="panel-title text-left">
+              <img
+               class="img-responsive"
+               ng-src="{{servicesCtrl.imageData.data[2].dataSrc}}" />
+              <span>{{servicesCtrl.imageData.data[2].title}}</span>
+            </h3>
+            <!-- <i class="fa fa-chevron-down pull-right icon-rotate"></i> -->
+            <div class="openList pull-right"></div>
+          </div>
+          <div id="collapse3" class="collapse">
+            <div class="panel-body">
+              <div class="row listRow" ng-repeat="listItem in servicesCtrl.imageData.data[2].modalData">
+                <div class="col-xs-4">
+                  <img
+                    class="img-responsive"
+                    ng-src="{{listItem.dataSrc}}" />
+                </div>
+                <div class="col-xs-8">
+                  <ul>
+                    <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+
+         <!-- panel -->
+         <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-parent="#accordian" data-toggle="collapse" data-target="#collapse4" active-deactive>
+            <h3 class="panel-title text-left">
+              <img
+               class="img-responsive"
+               ng-src="{{servicesCtrl.imageData.data[3].dataSrc}}" />
+              <span>{{servicesCtrl.imageData.data[3].title}}</span>
+            </h3>
+            <!-- <i class="fa fa-chevron-down pull-right icon-rotate"></i> -->
+            <div class="openList pull-right"></div>
+          </div>
+          <div id="collapse4" class="collapse">
+            <div class="panel-body">
+              <div class="row listRow" ng-repeat="listItem in servicesCtrl.imageData.data[3].modalData">
+                <div class="col-xs-4">
+                  <img
+                    class="img-responsive"
+                    ng-src="{{listItem.dataSrc}}" />
+                </div>
+                <div class="col-xs-8">
+                  <ul>
+                    <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+
+         <!-- panel -->
+         <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-parent="#accordian" data-toggle="collapse" data-target="#collapse5" active-deactive>
+            <h3 class="panel-title text-left">
+              <img
+               class="img-responsive"
+               ng-src="{{servicesCtrl.imageData.data[4].dataSrc}}" />
+              <span>{{servicesCtrl.imageData.data[4].title}}</span>
+            </h3>
+            <!-- <i class="fa fa-chevron-down pull-right icon-rotate"></i> -->
+            <div class="openList pull-right"></div>
+          </div>
+          <div id="collapse5" class="collapse">
+            <div class="panel-body">
+              <div class="row listRow" ng-repeat="listItem in servicesCtrl.imageData.data[4].modalData">
+                <div class="col-xs-4">
+                  <img
+                    class="img-responsive"
+                    ng-src="{{listItem.dataSrc}}" />
+                </div>
+                <div class="col-xs-8">
+                  <ul>
+                    <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+
+         <!-- panel -->
+         <div class="panel panel-default">
+          <div class="panel-heading collapsed" data-parent="#accordian" data-toggle="collapse" data-target="#collapse6" active-deactive>
+            <h3 class="panel-title text-left">
+              <img
+               class="img-responsive"
+               ng-src="{{servicesCtrl.imageData.data[5].dataSrc}}" />
+              <span>{{servicesCtrl.imageData.data[5].title}}</span>
+            </h3>
+            <!-- <i class="fa fa-chevron-down pull-right icon-rotate"></i> -->
+            <div class="openList pull-right"></div>
+          </div>
+          <div id="collapse6" class="collapse">
+            <div class="panel-body">
+              <div class="row listRow" ng-repeat="listItem in servicesCtrl.imageData.data[5].modalData">
+                <div class="col-xs-4">
+                  <img
+                    class="img-responsive"
+                    ng-src="{{listItem.dataSrc}}" />
+                </div>
+                <div class="col-xs-8">
+                  <ul>
+                    <li ng-repeat="point in listItem.data" class="pointStyle">{{point}}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
       </div>
     </div>
   </div>
