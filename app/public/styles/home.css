@@ -190,6 +190,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 
 .fabToolBar ul{
   list-style: none;
+  padding: 0;
 }
 
 .fabToolBar ul > li{
@@ -203,8 +204,20 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 }
 
 .fabToolBar ul > li > i:hover{
-  color: #e5d80e;
   font-size: 2em;
+  cursor: pointer;
+}
+
+.fabToolBar ul > li > i.fa-facebook-official:hover{
+  color: #3b5998;
+}
+
+.fabToolBar ul > li > i.fa-twitter-square:hover{
+  color: #00aced;
+}
+
+.fabToolBar ul > li > i.fa-linkedin-square:hover{
+  color:#007bb6;
 }
 
 /*********/
@@ -233,7 +246,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   z-index: 100;
   top: 0;
   right: 0;
-  background-color: #111;
+  background-color: #222;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -260,7 +273,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 }
 
 .container-box ul.nav{
-  padding-top: 20px;
+  padding: 20px 0;
 }
 
 /* .container-box.ng-hide{
