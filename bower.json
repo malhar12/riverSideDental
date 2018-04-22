@@ -31,7 +31,9 @@
     "videogular-buffering": "^1.4.4",
     "angular-sanitize": "^1.6.4",
     "videogular-overlay-play": "^1.4.4",
-    "videogular-poster": "^1.4.4"
+    "videogular-poster": "^1.4.4",
+    "angular-fullpage.js": "^0.2.1",
+    "css-hamburgers": "^0.9.3"
   },
   "resolutions": {
     "angular": "^1.6.4",

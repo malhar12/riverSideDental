@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('riversideDental')
-      .controller('AboutController', ['$sce', function($sce){
+      .controller('AboutController', ['$sce', '$rootScope' ,function($sce, $rootScope){
         var vm = this;
 
         this.teamSolos = [
@@ -15,20 +15,10 @@
             imgSrc: 'images/teamPic-2.png',
             name: 'Steve Kramer',
             description: 'Morbi finibus augue vitae sodales tincidunt. Morbi scelerisque, nibh vitae varius congue, eros justo facilisis est, quis luctus lorem felis vitae ante.'
-          },
-          {
-            imgSrc: 'images/teamPic-3.png',
-            name: 'Aaron Phischles',
-            description: 'bibendum urna a, egestas sem. Ut ultricies semper urna. Nunc ut metus tristique, ornare ipsum quis, interdum est. Praesent placerat diam justo, et.'
-          },
-          {
-            imgSrc: 'images/teamPic-4.png',
-            name: 'Kristy Ann',
-            description: 'Duis vel purus posuere, porta mauris ac, suscipit dolor. Vivamus iaculis eros et magna maximus efficitur. Cras malesuada eros nec accumsan malesuada.'
           }
         ];
 
-        this.number = [{label: 1}, {label: 2}, {label: 3}, {label: 4}, {label: 5}, {label: 6}, {label: 7}, {label: 8}];
+        // this.number = [{label: 1}, {label: 2}, {label: 3}, {label: 4}, {label: 5}, {label: 6}, {label: 7}, {label: 8}];
         this.numberLoaded = true;
 
         this.config = {
@@ -40,16 +30,7 @@
 
         this.breakpoints = [
           {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              infinite: true,
-              dots: false
-            }
-          },
-          {
-            breakpoint: 600,
+            breakpoint: 760,
             settings: {
               slidesToShow: 2,
               slidesToScroll: 1,
@@ -58,7 +39,7 @@
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 300,
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
@@ -67,6 +48,8 @@
             }
           }
         ];
+
+
         this.slickConfig = {
           enabled: true,
           autoplay: false,

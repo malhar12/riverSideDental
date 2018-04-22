@@ -185,9 +185,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 }
 
 .fabToolBar{
-  position: absolute;
-  right: 15px;
-  bottom: 15px;
+  display: inline-block;
 }
 
 .fabToolBar ul{
@@ -227,3 +225,50 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   height: auto !important;*/
   z-index: -100;
 }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  text-align: center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  /* transition: 0s */
+}
+
+#main {
+  transition: margin-right .5s;
+  /*padding: 16px;*/
+}
+
+.container-box{
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.container-box ul.nav{
+  padding-top: 20px;
+}
+
+/* .container-box.ng-hide{
+  opacity: 0;
+} */
+
+/* .hamburger.hamburger--spin .hamburger-box .hamburger-inner,
+.hamburger.hamburger--spin .hamburger-box .hamburger-inner::before,
+.hamburger.hamburger--spin .hamburger-box .hamburger-inner::after{
+  background-color: #fff;
+} */

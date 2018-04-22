@@ -1,41 +1,35 @@
 <section class="container-fluid">
-  <div class="nav-container">
+  <div id="main" class="nav-container">
       <div class="row">
-        <div class="col-md-1 col-sm-1 col-xs-1">
+        <!-- <div class="col-md-1 col-sm-1 col-xs-1">
           <a ui-sref="home" ng-show="!homeCtrl.isOpen">
               <img ng-src="images/logo-highlight.png" width="120px" height="120px"
                 onmouseover="this.src='images/logo-normal.png'" onmouseout="this.src='images/logo-highlight.png'"/>
           </a>
-        </div>
-        <div class="col-md-11 col-sm-11 col-xs-11">
+        </div> -->
+        <div class="col-md-12 col-sm-12 col-xs-12">
           <span class="pull-right">
-            <i class="fa fa-bars" aria-hidden="true" ng-click="homeCtrl.hideNavBar()" ng-if="!homeCtrl.isOpen"></i>
+            <!-- <i class="fa fa-bars" aria-hidden="true" ng-click="homeCtrl.hideNavBar()" ng-if="!homeCtrl.isOpen"></i> -->
+            <!-- <div class="fabToolBar">
+              <ul>
+                <li><i class="fa fa-facebook-official"></i></li>
+                <li><i class="fa fa-twitter-square"></i></li>
+                <li><i class="fa fa-linkedin-square"></i></li>
+              </ul>
+            </div> -->
+
           </span>
         </div>
       </div>
-      <div class="row">
-        <div class="fabToolBar">
-          <ul>
-            <li><i class="fa fa-facebook-official"></i></li>
-            <li><i class="fa fa-twitter-square"></i></li>
-            <li><i class="fa fa-linkedin-square"></i></li>
-          </ul>
+      <div class="video-container">
+        <video autoplay loop id="video-background" muted>
+          <source src="videos/mute-vbg-480.mp4" type="video/mp4">
+        </video>
       </div>
   </div>
-  <div class="overlay-nav" ng-if="homeCtrl.isOpen">
-    <div class="row">
-      <div class="col-md-1 col-sm-1 col-xs-1">
-        <a ui-sref="home" ng-show="homeCtrl.isOpen">
-            <img src="images/logo-normal.png" width="120px" height="120px" />
-        </a>
-      </div>
-      <div class="col-md-11 col-sm-11 col-xs-11">
-        <span class="pull-right">
-          <i class="fa fa-times" aria-hidden="true" ng-click="homeCtrl.hideNavBar()" ng-if="homeCtrl.isOpen"></i>
-        </span>
-      </div>
-    </div>
-    <div class="row">
+  <div id="sidenav" class="sidenav">
+    <div class="container-box" ng-show="{{$rootScope.showContent}}">
+      <img ng-src="images/logo-highlight.png" width="120px" height="120px" style="background-color:#fff;"/>
       <ul class="nav flex-column">
         <li class="nav-item">
           <a class="nav-link active" ui-sref="about">ABOUT</a>
@@ -57,10 +51,5 @@
         </li>
       </ul>
     </div>
-  </div>
-  <div class="video-container">
-    <video autoplay loop id="video-background" muted>
-      <source src="videos/mute-vbg-480.mp4" type="video/mp4">
-    </video>
   </div>
 </section>

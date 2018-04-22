@@ -2,8 +2,14 @@
   'use strict';
 
   angular.module('riversideDental')
-    .controller('HomeController', [ function(){
+    .controller('HomeController', [ '$rootScope', '$scope', function($rootScope, $scope){
       var vm = this;
+
+      $rootScope.showContent = true;
+
+      $rootScope.$on('showContent', function(event, data){
+        $rootScope.showContent = data.showContent;
+      });
 
       vm.isOpen = false;
       vm.fabOpen =false;

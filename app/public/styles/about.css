@@ -1,7 +1,7 @@
 body{
 
-  background-image: url('../images/school.png');
-  background-repeat: repeat-x repeat-y;
+  /* background-image: url('../images/school.png');
+  background-repeat: repeat-x repeat-y; */
   font-family: 'Open Sans', sans-serif;
 }
 .container-fluid div.mainContent-Contianer{
@@ -24,9 +24,9 @@ ul.listContainer{
   border-radius: 4px;
 }
 
-/*.carouselContainer.slick-slider{
+.carouselContainer.slick-slider{
   display: inline-block;
-}*/
+}
 
 .carouselContainer div.card{
   width: 180px;
@@ -56,6 +56,12 @@ ul.listContainer{
   outline: 0;
 }
 
+@media screen and (min-width: 1200px){
+  .col-lg-4 {
+      width: 34.33333333%;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 780px){
   .col-sm-offset-1{
     margin-left: 4.333333%;
@@ -65,11 +71,15 @@ ul.listContainer{
 @media screen and (min-width: 1024px) and (max-width: 1050px){
   .slick-track{
     width: 760px !important;
-    margin:0 0 0 20px;
+    /* margin:0 0 0 20px; */
   }
 
   .slick-track .slick-slide.slick-active{
     width: 190px !important;
+  }
+
+  .col-md-5 {
+    width: 42.66666667%;
   }
 }
 
