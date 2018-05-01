@@ -1,0 +1,17 @@
+<svg width="184" height="29" viewBox="0 0 184 29" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        Asterisk Group
+    </title>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0-1h184v30H0z"/>
+        <g stroke="#8888A3" stroke-width="3" stroke-linecap="round">
+            <path d="M15 2l-5 25M2 11l23 7M7 4l12 23M22 7L4 19"/>
+        </g>
+        <g stroke="#8888A3" stroke-width="3" stroke-linecap="round">
+            <path d="M91 2l-5 25M78 11l23 7M83 4l12 23M98 7L80 19"/>
+        </g>
+        <g stroke="#8888A3" stroke-width="3" stroke-linecap="round">
+            <path d="M172 2l-5 25M159 11l23 7M164 4l12 23M179 7l-18 12"/>
+        </g>
+    </g>
+</svg>

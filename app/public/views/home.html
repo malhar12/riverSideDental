@@ -1,34 +1,62 @@
 <section class="container-fluid">
   <div id="main" class="nav-container">
-    <div full-page>
-        <div class="section">
-          <div class="video-container">
-            <!-- <video autoplay loop id="video-background" muted>
-              <source src="videos/mute-vbg-480.mp4" type="video/mp4">
-            </video> -->
-            <video-background source="homeCtrl.myVideo" auto-play="true"></video-background>
-          </div>
-        </div>
-        <div class="section">
+    <slidescroll>
+        <slide>
+          <!-- Slide 1  -->
+          <video autoplay loop id="video-background">
+            <source src="videos/mute-vbg-480.mp4" type="video/mp4">
+          </video>
+        </slide>
+        <slide>
+          <!-- Slide 2  -->
           <div class="mainContent-Contianer">
             <div class="row">
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                <h1 class="display-3">Who we are ?</h1>
-                <p class="lead">
-                  We are service providers to Dentists /Dental students who are seeking to provide dentistry in USA and want to make an informed decision about the realities of life after graduation.
-                </p>
-                <p class="lead">
-                  Our Vision is to:
-                </p>
-                <ul class="listContainer">
-                  <li>Share our knowledge</li>
-                  <li>Experiences</li>
-                  <li>Resources</li>
-                  <li>Skills</li>
-                </ul>
-                <p class="lead">So, we can help you make a clear informed decision before you move to USA and pursue dentistry as a career</p>
+              <div class="col-xs-12">
+                <div class="content-wrapper-title">
+                  <h1>About Us</h1>
+                </div>
               </div>
-              <div class="col-md-offset-1 col-sm-offset-1 col-md-7 col-sm-7 col-xs-12 videoContainer">
+            </div>
+            <div class="row">
+              <div class="col-md-offest-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-12">
+                <div class="content-wrapper-body">
+                  <p class="lead">
+                    We are career mentors & advisors to dentists or dental students who are seeking to practice dentistry in USA and want to make an informed decision about the realities of life after graduation.
+                  </p>
+                  <div class="separator-div">
+                    <img src="../images/asterisks.svg"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </slide>
+        <slide>
+          <!-- Slide 3  -->
+          <div class="mainContent-Contianer">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="content-wrapper-title">
+                  <h1>How it works</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-12">
+                <div style="font-size:20px;text-align:left;padding:15px; margin:10% 0;">
+                  <span style="word-wrap:break-word;">
+                    At  Dentaxplorer, we help aspiring dentists like you get the support you need to work in the United States.<br><br>Our mentoring program pairs you with an established dentist here in the United States and that mentor helps you understand the different parts of dental practices in this country.
+                  </span>
+                  <br><br>
+                  <span style="word-wrap:break-word;">
+                    Your mentor will take you in and teach you all the different procedural considerations here in America, they will work with you on understanding the cultural practices expected of American dentists and their patients, and finally, you will leave with an understanding of how to successfully practice dentistry in the United States.
+                  </span>
+                </div>
+                <div class="separator-div" style="text-align:center;">
+                  <img src="../images/asterisks.svg"></img>
+                </div>
+              </div>
+              <div class="col-md-8 col-sm-8 col-xs-12 videoContainer">
                 <div class="videoPlayer">
                   <videogular vg-theme="homeCtrl.config.theme">
                     <vg-media vg-src="homeCtrl.config.sources"
@@ -53,101 +81,167 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-lg-offset-4 col-md-offset-3 col-sm-offset-2 col-xs-offset-2 col-lg-4 col-md-5 col-sm-8 col-xs-8">
-              <slick class="carouselContainer" settings="homeCtrl.slickConfig" ng-if="homeCtrl.numberLoaded" slides-to-show=2 slides-to-scroll=1 dots="false" responsive="homeCtrl.breakpoints"infinite="true" >
-                <div ng-repeat="teamMem in homeCtrl.teamSolos">
-                  <div class="card">
-                    <img class="card-img-top" ng-src="{{teamMem.imgSrc}}" width="160" height="160" alt="Card image cap">
-                    <div class="card-block">
-                      <h4 class="card-title">{{teamMem.name}}</h4>
-                      <p class="card-text">{{teamMem.description}}</p>
-                    </div>
-                  </div>
-                </div>
-              </slick>
-            </div>
-            </div>
           </div>
-        </div>
-        <div class="section">
+        </slide>
+        <slide>
+          <!-- Slide 4  -->
           <div class="mainContent-Contianer">
             <div class="row">
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                <h1 class="display-3">Who we are ?</h1>
-                <p class="lead">
-                  We are service providers to Dentists /Dental students who are seeking to provide dentistry in USA and want to make an informed decision about the realities of life after graduation.
-                </p>
-                <p class="lead">
-                  Our Vision is to:
-                </p>
-                <ul class="listContainer">
-                  <li>Share our knowledge</li>
-                  <li>Experiences</li>
-                  <li>Resources</li>
-                  <li>Skills</li>
-                </ul>
-                <p class="lead">So, we can help you make a clear informed decision before you move to USA and pursue dentistry as a career</p>
-              </div>
-              <div class="col-md-offset-1 col-sm-offset-1 col-md-7 col-sm-7 col-xs-12 videoContainer">
-                <div class="videoPlayer">
-                  <videogular vg-theme="homeCtrl.config.theme">
-                    <vg-media vg-src="homeCtrl.config.sources"
-                        vg-tracks="homeCtrl.config.tracks">
-                    </vg-media>
-
-                    <vg-controls>
-                      <vg-play-pause-button></vg-play-pause-button>
-                      <!-- <vg-time-display>{{ currentTime | date:'mm:ss' }}</vg-time-display> -->
-                      <vg-scrub-bar>
-                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-                      </vg-scrub-bar>
-                      <!-- <vg-time-display>{{ timeLeft | date:'mm:ss' }}</vg-time-display> -->
-                      <vg-volume>
-                        <vg-mute-button></vg-mute-button>
-                        <vg-volume-bar></vg-volume-bar>
-                      </vg-volume>
-                      <vg-fullscreen-button></vg-fullscreen-button>
-                    </vg-controls>
-                    <vg-overlay-play></vg-overlay-play>
-                  </videogular>
+              <div class="col-xs-12">
+                <div class="content-wrapper-title">
+                  <h1>Services</h1>
                 </div>
               </div>
             </div>
             <div class="row">
-              <div class="col-lg-offset-4 col-md-offset-3 col-sm-offset-2 col-xs-offset-2 col-lg-4 col-md-5 col-sm-8 col-xs-8">
-              <slick class="carouselContainer" settings="homeCtrl.slickConfig" ng-if="homeCtrl.numberLoaded" slides-to-show=2 slides-to-scroll=1 dots="false" responsive="homeCtrl.breakpoints"infinite="true" >
-                <div ng-repeat="teamMem in homeCtrl.teamSolos">
-                  <div class="card">
-                    <img class="card-img-top" ng-src="{{teamMem.imgSrc}}" width="160" height="160" alt="Card image cap">
-                    <div class="card-block">
-                      <h4 class="card-title">{{teamMem.name}}</h4>
-                      <p class="card-text">{{teamMem.description}}</p>
-                    </div>
+              <div class="col-md-offest-5 col-md-5 col-sm-offset-5 col-sm-5 col-xs-12">
+                <div class="content-wrapper-body">
+                  <ul style="list-style:none;padding-left:0;margin:10% 0;">
+                    <li ng-repeat="service in homeCtrl.services">
+                      <span class="service-title">{{service.name}}</span>
+                      <span ng-repeat="listItem in service.list" class="service-list">
+                        {{listItem}}
+                      </span>
+                    </li>
+                  </ul>
+                  <div class="separator-div">
+                    <img src="../images/asterisks.svg"></img>
                   </div>
                 </div>
-              </slick>
-            </div>
+              </div>
             </div>
           </div>
-        </div>
-    </div>
+        </slide>
+        <slide>
+          <!-- Slide 5  -->
+          <div class="mainContent-Contianer">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="content-wrapper-title">
+                  <h1>Meet The Team</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-offset-5 col-md-offset-3 col-sm-offset-2 col-xs-offset-2 col-lg-4 col-md-5 col-sm-8 col-xs-8">
+                <div style="margin:10% 0;">
+                  <slick class="carouselContainer" settings="homeCtrl.slickConfig" ng-if="homeCtrl.numberLoaded" slides-to-show=2 slides-to-scroll=1 dots="false" responsive="homeCtrl.breakpoints"infinite="true" >
+                    <div ng-repeat="teamMem in homeCtrl.teamSolos">
+                      <div class="card">
+                        <img class="card-img-top" ng-src="{{teamMem.imgSrc}}" width="160" height="160" alt="Card image cap">
+                        <div class="card-block">
+                          <h4 class="card-title">{{teamMem.name}}</h4>
+                          <p class="card-text">{{teamMem.description}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </slick>
+                </div>
+                <div class="separator-div" style="text-align:center;">
+                  <img src="../images/asterisks.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+        </slide>
+        <slide>
+          <!-- Slide 6  -->
+          <div class="mainContent-Contianer">
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="content-wrapper-title">
+                  <h1>Contact Us</h1>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-offest-5 col-md-5 col-sm-offset-5 col-sm-5 col-xs-12">
+                <div class="content-wrapper-body" style="font-size:16px;">
+                  <div class="officeContainer">
+                    <div class="row">
+                      <div class="col-xs-6">
+                        <legend class="legendClass"><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+                        <address>
+                            <strong>Dental Xplorer, Inc.</strong><br>
+                            795 Folsom Ave, Suite 600<br>
+                            New York City, NY 10010<br>
+                        </address>
+                      </div>
+                      <div class="col-xs-6">
+                        <legend class="legendClass"><span class="glyphicon glyphicon-phone-alt"></span> Reach Us At</legend>
+                        <address>
+                          <abbr title="Phone">
+                                        P:</abbr>
+                                    +1 (123) 456-7890
+                          <p>Mail us at: <a href="mailto:#">first.last@example.com</a></p>
+                        </address>
+                      </div>
+                    </div>
+                  </div>
+                  <form style="margin:10% 0;">
+                  <div class="row formBox">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="name">
+                                  Name</label>
+                              <input type="text" class="form-control" id="name" placeholder="Enter Name" required="required" />
+                          </div>
+                          <div class="form-group">
+                              <label for="email">
+                                  Email Address</label>
+                              <div class="input-group">
+                                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                  </span>
+                                  <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                          </div>
+                          <div class="form-group">
+                              <label for="subject">
+                                  Subject</label>
+                              <input type="text" class="form-control" id="subject" placeholder="Enter Subject" required="required" />
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <label for="name">
+                                  Message</label>
+                              <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                  placeholder="Message" style="resize:none;"></textarea>
+                          </div>
+                      </div>
+                      <div class="col-md-12">
+                          <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                              Send Message</button>
+                      </div>
+                  </div>
+                  </form>
+                  <div class="separator-div">
+                    <img src="../images/asterisks.svg"></img>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </slide>
+    </slidescroll>
   </div>
   <div id="sidenav" class="sidenav">
     <div class="container-box" ng-show="{{$rootScope.showContent}}">
-      <img ng-src="images/logo-highlight.png" width="120px" height="120px" style="background-color:#fff;"/>
+      <img ng-src="images/logo-highlight.png" ng-click="homeCtrl.moveTo(0)" width="120px" height="120px" style="background-color:#fff;"/>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link active" ui-sref="about">ABOUT</a>
+          <a class="nav-link" ng-click="homeCtrl.moveTo(1)">About Us</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">WHY US</a>
+          <a class="nav-link" ng-click="homeCtrl.moveTo(2)">How it Works</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" ui-sref="services">SERVICES</a>
+          <a class="nav-link" ng-click="homeCtrl.moveTo(3)">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" ui-sref="contact">CONTACT US</a>
+          <a class="nav-link" ng-click="homeCtrl.moveTo(4)">Meet The Team</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ng-click="homeCtrl.moveTo(5)">Contact Us</a>
         </li>
       </ul>
       <div class="fabToolBar">

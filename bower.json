@@ -35,7 +35,8 @@
     "angular-fullpage.js": "git://github.com/hellsan631/angular-fullpage.js.git#df5ed68de1c8dd0c96a51b40e68801c84fee6bff",
     "css-hamburgers": "^0.9.3",
     "mm.angular-fullpage.js": "^1.3.8",
-    "angular-video-background": "angular-videos-background#*"
+    "angular-video-background": "angular-videos-background#*",
+    "funkyrobot-angular-slidescroll": "net-funkyrobot/funkyrobot-angular-slidescroll#^0.0.11"
   },
   "resolutions": {
     "angular": "^1.6.4",

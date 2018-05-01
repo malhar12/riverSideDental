@@ -1,3 +1,12 @@
+body{
+
+  /* background-image: url('../images/school.png');
+  background-repeat: repeat-x repeat-y; */
+  /* font-family: 'Helvetica', 'Arial', sans-serif; */
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  font-family: 'Playfair Display', 'Arial' serif !important;
+}
+
 section.container-fluid{
   margin:0 15px 0 15px;
   padding:0;
@@ -11,12 +20,21 @@ section div.nav-container{
   bottom:0;
   overflow-x: hidden;
   z-index: 3;
+  overflow-y: hidden;
 }
 
-section div.nav-container div button{
+/* section div.nav-container div button{
   background: none;
   border: 0;
   margin-left: 15px;
+} */
+
+.carouselContainer  .slick-prev{
+  left: 0;
+}
+
+.carouselContainer .slick-next{
+  right: 0;
 }
 
 section div.nav-container div button:focus{
@@ -233,7 +251,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   right: 0;
   bottom: 0;
   min-width: 100%;
-  min-height: 100%;
+  height: 100%;
   /*width: 100% !important;
   height: auto !important;*/
   z-index: -100;
@@ -251,6 +269,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
   transition: 0.5s;
   padding-top: 60px;
   text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .sidenav a {
@@ -285,3 +304,157 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 .hamburger.hamburger--spin .hamburger-box .hamburger-inner::after{
   background-color: #fff;
 } */
+
+.mainContent-Contianer .content-wrapper-title{
+  padding: 15px;
+}
+
+.mainContent-Contianer .content-wrapper-body{
+  margin: 10% 0;
+  text-align: center;
+}
+
+.mainContent-Contianer .content-wrapper-body .service-title{
+  display: block;
+  text-align: left;
+  font-size: 25px;
+}
+
+.mainContent-Contianer .content-wrapper-body .service-list{
+  display: block;
+  text-align: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.mainContent-Contianer .separator-div{
+  /* background-image: url('../images/asterisks.svg'); */
+}
+
+.container-fluid div.mainContent-Contianer p.lead{
+  font-size: 50px;
+}
+
+.container-fluid div.mainContent-Contianer{
+  font-family: 'Playfair Display', serif;
+}
+
+.formBox, .officeContainer{
+  text-align: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.formContainer{
+  margin-top: 50px;
+}
+
+.formContainer .formBox{
+  padding: 10px;
+  margin:auto;
+}
+
+.legendClass{
+  border-bottom: 0;
+}
+
+.container-fluid div.mainContent-Contianer{
+  width: 100%;
+  /* margin: 60px auto; */
+}
+
+
+
+ul.listContainer{
+  list-style: none;
+  padding:10px;
+}
+
+.carouselContainer{
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.carouselContainer.slick-slider{
+  display: inline-block;
+}
+
+.carouselContainer div.card{
+  width: 180px;
+  margin:15px auto;
+  padding: 10px;
+}
+
+.carouselContainer div.card img.card-img-top{
+  margin:auto;
+}
+
+.carouselContainer div.card:hover{
+  background-color: #8888a3;
+  border-radius: 4px;
+  cursor: default;
+
+  -webkit-box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow:    5px 5px 3px rgba(0, 0, 0, 0.4);
+  box-shadow:         5px 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.carouselContainer div.card:active{
+  outline: 0;
+}
+
+.slick-track .slick-slide{
+  outline: 0;
+}
+
+@media screen and (min-width: 1200px){
+  .col-lg-4 {
+      width: 34.33333333%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 780px){
+  .col-sm-offset-1{
+    margin-left: 4.333333%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1050px){
+  .slick-track{
+    width: 760px !important;
+    /* margin:0 0 0 20px; */
+  }
+
+  .slick-track .slick-slide.slick-active{
+    width: 190px !important;
+  }
+
+  .col-md-5 {
+    width: 42.66666667%;
+  }
+}
+
+@media screen and (min-width: 1051px){
+  .slick-track{
+    width: 760px !important;
+    margin:0 15px 0 15px;
+  }
+
+  .slick-track .slick-slide.slick-active{
+    width: 190px !important;
+  }
+}
+
+.videoContainer{
+  position: relative;
+}
+
+.videoPlayer{
+  width: 60%;
+  margin:50px auto;
+}
+
+div.iconButton.play{
+  font-size: 50px;
+}
