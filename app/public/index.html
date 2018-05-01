@@ -41,6 +41,17 @@
         transition: margin-right .5s;
       }
 
+      .contact-basic{
+        z-index: 101;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        outline: none;
+        padding: 15px;
+        font-family: 'Playfair Display', sans-serif;
+        font-size: 21px;
+      }
+
       .hamburger.hamburger--spin .hamburger-box .hamburger-inner,
       .hamburger.hamburger--spin .hamburger-box .hamburger-inner::before,
       .hamburger.hamburger--spin .hamburger-box .hamburger-inner::after{
@@ -54,6 +65,11 @@
         <span class="hamburger-inner"></span>
       </span>
     </button>
+    <div class="contact-basic">
+      <div>Reach Us At</div>
+      <a href="mailto:malhar.deshpande18@gmail.com">abc.xyz@test.com</a>
+      <div>Contact No: +1 (123) 456-7890</div>
+    </div>
   <!-- <body> -->
     <base href="/">
     <div ui-view></div>
