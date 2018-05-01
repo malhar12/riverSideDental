@@ -6,7 +6,7 @@
 
   app.use(express.static(__dirname + '/app/public'));
 
-  app.listen(3000, function(){
+  app.listen(process.env.PORT || 3000, function(){
     console.log('starting the server at 3000...');
   });
 })();
