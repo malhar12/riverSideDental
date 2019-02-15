@@ -11,9 +11,13 @@
         $rootScope.showContent = data.showContent;
       });
 
+      vm.src = "videos/mute-vbg-480.mp4";
+
       vm.myVideo = {
         mp4: "videos/dentalXplorer.mp4"
       };
+
+      vm.trustedUrl = $sce.trustAsResourceUrl("https://youtu.be/8szYYh4Uz-E");
 
       vm.isOpen = false;
       vm.fabOpen =false;

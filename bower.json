@@ -39,7 +39,6 @@
     "funkyrobot-angular-slidescroll": "net-funkyrobot/funkyrobot-angular-slidescroll#^0.0.11"
   },
   "resolutions": {
-    "angular": "^1.6.4",
-    "slick-carousel": "~1.6.0"
+    "angular": "^1.6.4"
   }
 }
