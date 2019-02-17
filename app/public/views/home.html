@@ -3,10 +3,7 @@
     <slidescroll>
         <slide>
           <!-- Slide 1  -->
-          <!-- <video autoplay loop id="video-background" ng-src={{trustedUrl}}>
-            <source src="videos/mute-vbg-480.mp4" type="video/mp4">
-          </video> -->
-          <video autoplay=true muted=true loop id="video-background">
+          <video playsinline autoplay=true muted=true loop id="video-background">
             <source src="videos/sliceOfNYC-2-480p.mp4" type="video/mp4"></source>
           </video>
         </slide>
@@ -23,9 +20,17 @@
             <div class="row">
               <div class="col-md-offest-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-12">
                 <div class="content-wrapper-body">
-                  <p class="lead">
+                  <p class="lead" font-res>
                     We are career mentors & advisors to dentists or dental students who are seeking to practice dentistry in USA and want to make an informed decision about the realities of life after graduation.
                   </p>
+                  <div>
+                    <div style="margin: 10% 0;" uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                      <div uib-slide ng-repeat="slide in homeCtrl.slides track by slide.id" index="$index">
+                        <img ng-src="{{slide.image}}" style="margin:auto;">
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="separator-div">
                     <img src="../images/asterisks.svg"></img>
                   </div>
@@ -46,7 +51,7 @@
             </div>
             <div class="row">
               <div class="col-md-4 col-sm-4 col-xs-12">
-                <div style="font-size:20px;text-align:left;padding:15px; margin:10% 0;">
+                <div style="font-size:90%;text-align:left;padding:15px; margin:10% 0;">
                   <span style="word-wrap:break-word;">
                     At  Dentalxplorer, we help aspiring dentists like you get the support you need to work in the United States.<br><br>Our mentoring program pairs you with an established dentist here in the United States and that mentor helps you understand the different parts of dental practices in this country.
                   </span>
@@ -97,9 +102,9 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-offest-5 col-md-5 col-sm-offset-5 col-sm-5 col-xs-12">
+              <div class="col-md-offset-5 col-md-5 col-sm-offset-5 col-sm-5 col-xs-12">
                 <div class="content-wrapper-body">
-                  <ul style="list-style:none;padding-left:0;margin:10% 0;">
+                  <ul style="list-style:none;padding-left:0;">
                     <li ng-repeat="service in homeCtrl.services">
                       <span class="service-title">{{service.name}}</span>
                       <span ng-repeat="listItem in service.list" class="service-list">
@@ -147,83 +152,6 @@
             </div>
           </div>
         </slide>
-        <!-- <slide>
-          <div class="mainContent-Contianer">
-            <div class="row">
-              <div class="col-xs-12">
-                <div class="content-wrapper-title">
-                  <h1>Contact Us</h1>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-offest-5 col-md-5 col-sm-offset-5 col-sm-5 col-xs-12">
-                <div class="content-wrapper-body" style="font-size:16px;">
-                  <div class="officeContainer">
-                    <div class="row">
-                      <div class="col-xs-6">
-                        <legend class="legendClass"><span class="glyphicon glyphicon-globe"></span> Our office</legend>
-                        <address>
-                            <strong>Dental Xplorer, Inc.</strong><br>
-                            795 Folsom Ave, Suite 600<br>
-                            New York City, NY 10010<br>
-                        </address>
-                      </div>
-                      <div class="col-xs-6">
-                        <legend class="legendClass"><span class="glyphicon glyphicon-phone-alt"></span> Reach Us At</legend>
-                        <address>
-                          <abbr title="Phone">
-                                        P:</abbr>
-                                    +1 (123) 456-7890
-                          <p>Mail us at: <a href="mailto:#">first.last@example.com</a></p>
-                        </address>
-                      </div>
-                    </div>
-                  </div>
-                  <form action="https://formspree.io/malhar.deshpande18@gmail.com" method="post" role="form">
-                  <div class="row formBox">
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="cust_name">
-                                  Name</label>
-                              <input type="text" name="cust_name" class="form-control" id="name" placeholder="Enter Name" required="required" />
-                          </div>
-                          <div class="form-group">
-                              <label for="email">
-                                  Email Address</label>
-                              <div class="input-group">
-                                  <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
-                                  </span>
-                                  <input type="email" name="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
-                          </div>
-                          <div class="form-group">
-                              <label for="_subject">
-                                  Subject</label>
-                              <input type="text" class="form-control" name="_subject" id="subject" placeholder="Enter Subject" required="required" />
-                          </div>
-                      </div>
-                      <div class="col-md-6">
-                          <div class="form-group">
-                              <label for="message">
-                                  Message</label>
-                              <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
-                                  placeholder="Message" style="resize:none;"></textarea>
-                          </div>
-                      </div>
-                      <div class="col-md-12">
-                          <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
-                              Send Message</button>
-                      </div>
-                  </div>
-                  </form>
-                  <div class="separator-div">
-                    <img src="../images/asterisks.svg"></img>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </slide> -->
     </slidescroll>
   </div>
   <div id="sidenav" class="sidenav">
@@ -266,6 +194,11 @@
           <div>
             <p>Copyright © 2018 All rights reserved</p>
           </div>
+        </div>
+        <div>
+          <div>Reach Us At</div>
+          <a href="mailto:malhar.deshpande18@gmail.com">abc.xyz@test.com</a>
+          <div>Contact No: +1 (123) 456-7890</div>
         </div>
       </div>
     </div>

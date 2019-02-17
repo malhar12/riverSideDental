@@ -310,21 +310,22 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 }
 
 .mainContent-Contianer .content-wrapper-body{
-  margin: 10% 0;
+  /*margin: 10% 0;*/
   text-align: center;
+  padding: 15px;
 }
 
 .mainContent-Contianer .content-wrapper-body .service-title{
   display: block;
   text-align: left;
-  font-size: 25px;
+  font-size: 1.2em;
 }
 
 .mainContent-Contianer .content-wrapper-body .service-list{
   display: block;
   text-align: left;
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 16px;
+  font-size: 1em;
   line-height: 1.6;
 }
 
@@ -333,8 +334,12 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 }
 
 .container-fluid div.mainContent-Contianer p.lead{
-  font-size: 50px;
-  margin: 10% 0;
+  font-size: 1em;
+  margin: 5% 0;
+}
+
+.container-fluid div.mainContent-Contianer p.lead.lead-1440 {
+  font-size: 2em;
 }
 
 .container-fluid div.mainContent-Contianer{
@@ -463,4 +468,17 @@ div.iconButton.play{
 
 .sidenav ul.nav > li.nav-item > a.nav-link:hover{
   cursor: pointer;
+}
+
+.mainContent-Contianer .content-wrapper-body .carousel-control.left,
+.mainContent-Contianer .content-wrapper-body .carousel-control.right {
+  background-image: none;
+}
+
+.mainContent-Contianer .content-wrapper-body .carousel-control .glyphicon-chevron-left,.mainContent-Contianer .content-wrapper-body .carousel-control .glyphicon-chevron-right {
+  color: #222222;
+}
+
+.hide-slider {
+  display: none;
 }

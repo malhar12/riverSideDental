@@ -5,6 +5,21 @@
     .controller('HomeController', [ '$rootScope', '$scope', '$sce', 'fullPageService', function($rootScope, $scope, $sce, fullPageService){
       var vm = this;
 
+      vm.onFirstSlide = true;
+
+      // Handle page visibility change events
+      function handleVisibilityChange() {
+        if (document.visibilityState == "hidden") {
+          document.getElementById('video-background').pause();
+        } else if(document.visibilityState !== "hidden" && document.getElementById('video-background').paused && vm.onFirstSlide) {
+          document.getElementById('video-background').play();
+        }
+      }
+
+      document.addEventListener('visibilitychange', handleVisibilityChange, false);
+
+      // document.getElementById('main').addEventListener('wheel')
+
       $rootScope.showContent = true;
 
       $rootScope.$on('showContent', function(event, data){
@@ -44,8 +59,40 @@
         }
       ];
 
+      this.riverSidePhotos = ['images/riverSideDental-1.png', 'images/riverSideDental-2.png', 'images/riverSideDental-3.png'];
+
+      this.slides = [
+        {
+          image: 'images/riverSideDental-1.png',
+          id: '1',
+          text: 'abc'
+        },
+        {
+          image: 'images/riverSideDental-2.png',
+          id: '2',
+          text: 'def'
+        },
+        {
+          image: 'images/riverSideDental-3.png',
+          id: '3',
+          text: 'ghi'
+        }
+      ];
+
+      this.myInterval = 5000;
+      this.noWrapSlides = false;
+      this.active = 0;
+
       this.moveTo = function(slideIndex){
         $scope.$broadcast('TransitionToEvent', slideIndex);
+
+        if(slideIndex !== 0) {
+          document.getElementById('video-background').pause();
+          vm.onFirstSlide = false;
+        } else {
+          document.getElementById('video-background').play();
+          vm.onFirstSlide = true;
+        }
       }
 
       this.services = [
@@ -116,7 +163,8 @@
         draggable: false,
         autoplaySpeed: 3000,
         mobileFirst: true,
-        pauseOnFocus: true
+        pauseOnFocus: true,
+        arrows: true
       };
     }]);
 })();

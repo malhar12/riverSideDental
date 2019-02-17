@@ -3,6 +3,7 @@
 
   angular.module('riversideDental', [
     'ui.router',
+    'ui.bootstrap',
     'ngMaterial',
     'ngProgress',
     'ngAnimate',
