@@ -48,14 +48,14 @@
 
       this.teamSolos = [
         {
-          imgSrc: 'images/teamPic-1.png',
-          name: 'Alex Fusch',
-          description: 'Nulla venenatis sodales venenatis. Nullam at nunc quis urna semper malesuada. Curabitur ut augue ante. Fusce elementum neque vel tellus ultrices.'
+          imgSrc: 'images/Dr_Manish.jpg',
+          name: 'Dr. Manish',
+          description: `Dr. Manish completed his dental education from Boston University's Goldman School of Dental Medicine in 2009. Committed to providing the best, most advanced dental care, Dr. Manish keeps up to date on advances in the dental field and enhances his skills by continual education. Dr. Manish is a certified Invisalign® provider and enjoys creating beautiful smiles with the use of clear braces. Dr. Manish is affiliated with the Massachusetts Dental Society, Valley District Dental Society and the American Dental Association. He attends many educational courses to keep abreast of all the latest advances in the dental field. On the personal front, charismatic and fun, Dr. Manish is always the life of a party and loves to make people smile. In his spare time he enjoys Crossfit and travelling.`
         },
         {
-          imgSrc: 'images/teamPic-2.png',
-          name: 'Steve Kramer',
-          description: 'Morbi finibus augue vitae sodales tincidunt. Morbi scelerisque, nibh vitae varius congue, eros justo facilisis est, quis luctus lorem felis vitae ante.'
+          imgSrc: 'images/Dr_Neha.jpg',
+          name: 'Dr. Neha Arora',
+          description: 'Dr. Arora graduated from New York University College of Dentistry, Doctorate of Dental Surgery New York City, NY. Dr. Arora is an active member of the American Dental Association. She also has certifications in Invisalign, Nitrous Oxide, Oral Sedation and CPR. She is committed to continuing education in order to remain current with state-of-the-art technology, procedures and materials in dentistry. When she isn\'t practicing dentistry, she loves to read books.'
         }
       ];
 

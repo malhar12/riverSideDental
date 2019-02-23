@@ -336,10 +336,14 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 .container-fluid div.mainContent-Contianer p.lead{
   font-size: 1em;
   margin: 5% 0;
+  margin-top:0;
+  margin-bottom: 0;
 }
 
 .container-fluid div.mainContent-Contianer p.lead.lead-1440 {
   font-size: 2em;
+  margin-top:0;
+  margin-bottom: 0;
 }
 
 .container-fluid div.mainContent-Contianer{
@@ -386,9 +390,13 @@ ul.listContainer{
   display: inline-block;
 }
 
+.carouselContainer.slick-slider .slick-list {
+  width: 760px;
+}
+
 .carouselContainer div.card{
-  width: 180px;
-  margin:15px auto;
+  width: 300px;
+  margin:15px;
   padding: 10px;
 }
 
@@ -433,7 +441,7 @@ ul.listContainer{
   }
 
   .slick-track .slick-slide.slick-active{
-    width: 190px !important;
+    width: 300px !important;
   }
 
   .col-md-5 {
@@ -448,7 +456,7 @@ ul.listContainer{
   }
 
   .slick-track .slick-slide.slick-active{
-    width: 190px !important;
+    width: 300px !important;
   }
 }
 
