@@ -135,6 +135,10 @@
         theme: "../../bower_components/videogular-themes-default/videogular.css"
       };
 
+      this.checkResolution = function(){
+        return window.screen.width > 760;
+      }
+
       this.breakpoints = [
         {
           breakpoint: 760,
