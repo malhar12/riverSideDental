@@ -312,7 +312,7 @@ section div.overlay-nav.ng-enter.ng-enter-active{
 .mainContent-Contianer .content-wrapper-body{
   /*margin: 10% 0;*/
   text-align: center;
-  padding: 15px;
+  padding: 10px;
 }
 
 .mainContent-Contianer .content-wrapper-body .service-title{
@@ -466,7 +466,7 @@ ul.listContainer{
 
 .videoPlayer{
   width: 60%;
-  margin:50px auto;
+  margin: auto;
 }
 
 div.iconButton.play{
