@@ -467,6 +467,7 @@ ul.listContainer{
 .videoPlayer{
   width: 60%;
   margin: auto;
+  margin-bottom: 15px;
 }
 
 div.iconButton.play{
